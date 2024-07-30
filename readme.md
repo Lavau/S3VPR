@@ -9,7 +9,7 @@
 4. Change the 'dataloaders/train', 'dataloaders/val' python files related to the dataset path.
 5. Clone `DINOv2`: `git Clone https://github.com/facebookresearch/dinov2.git` at the path of `S3VPR`.
 6. In `pth`, download the training model: https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth.
-7. Train the model using the 'train.sh' command.
+7. Train the model using the `train.sh` command.
 
 ## Evaluate
-Download the checkpoint from [Google Drive]() to the path `pth`, and run  `python eval.py`.
+Download the checkpoint from [Google Drive](https://drive.google.com/file/d/1MQ6QmsVKPivjXuSs9p1afi9peMtgc0is/view?usp=drive_link) to the path `pth`, and run  `python eval.py`.
