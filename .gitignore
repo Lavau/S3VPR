@@ -1,7 +1,5 @@
 dinov2
 log_nohup
-logs
-pth
 __pycache__
 dataloaders/__pycache__
 dataloaders/train/__pycache__

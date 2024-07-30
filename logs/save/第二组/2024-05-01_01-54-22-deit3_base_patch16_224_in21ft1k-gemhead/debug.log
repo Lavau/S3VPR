@@ -1,0 +1,344 @@
+2024-05-01 01:54:22   Arguments: Namespace(aggregator_name='gemhead', backbone_name='deit3_base_patch16_224_in21ft1k', device='cuda', dim=768, epochs_num=80, foundation_model_path='pth/dinov2_vitb14_pretrain.pth', infer_batch_size=300, kernel_size=3, lr=0.0001, mlp_ratio=1, nc=4096, num_trainable_blocks=4, num_workers=4, optim='adam', patience=3, recall_values=[1, 5, 10, 100], resize=[224, 224], save_dir='logs/2024-05-01_01-54-22', seed=0, train_batch_size=160, val_set_names=['msls_val'])
+2024-05-01 01:54:22   The outputs are being saved in logs/2024-05-01_01-54-22
+2024-05-01 01:54:22   validation dataset names:['msls_val']
+2024-05-01 01:54:22   Using 2 GPUs and 64 CPUs
+2024-05-01 01:54:24   Loading pretrained weights from url (https://dl.fbaipublicfiles.com/deit/deit_3_base_224_21k.pth)
+2024-05-01 01:54:27   GeoLocalizationNet(
+  (backbone): DeiT(
+    (model): VisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (norm_pre): Identity()
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (1): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (2): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (3): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (4): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (5): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (6): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (7): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (8): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (9): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (10): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (11): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+      )
+      (norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (fc_norm): Identity()
+      (head): Linear(in_features=768, out_features=1000, bias=True)
+    )
+  )
+  (aggregator): GeMHead(
+    (pool): GeneralizedMeanPooling(3.0, output_size=1)
+    (fc): Linear(in_features=768, out_features=4096, bias=True)
+  )
+)
+2024-05-01 01:54:28   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-01 01:54:28   Start training epoch: 00
+2024-05-01 02:23:07   Finished epoch 00 in 0:28:39, average epoch loss = 1.0269
+2024-05-01 02:24:33   Ranking results: msls_val R@1: 0.6770, R@5: 0.8027, R@10: 0.8324, R@15: 0.8527, R@20: 0.8662, R@50: 0.9081, R@100: 0.9405
+2024-05-01 02:24:35   Improved: previous msls-val best R@1 = 0.0000, current R@1 = 0.6770
+2024-05-01 02:24:35   Start training epoch: 01
+2024-05-01 02:52:58   Finished epoch 01 in 0:28:22, average epoch loss = 0.8418
+2024-05-01 02:54:23   Ranking results: msls_val R@1: 0.6865, R@5: 0.8149, R@10: 0.8324, R@15: 0.8554, R@20: 0.8662, R@50: 0.9203, R@100: 0.9419
+2024-05-01 02:54:31   Improved: previous msls-val best R@1 = 0.6770, current R@1 = 0.6865
+2024-05-01 02:54:31   Start training epoch: 02
+2024-05-01 03:22:53   Finished epoch 02 in 0:28:21, average epoch loss = 0.7588
+2024-05-01 03:24:18   Ranking results: msls_val R@1: 0.7176, R@5: 0.8311, R@10: 0.8568, R@15: 0.8838, R@20: 0.8919, R@50: 0.9149, R@100: 0.9392
+2024-05-01 03:24:26   Improved: previous msls-val best R@1 = 0.6865, current R@1 = 0.7176
+2024-05-01 03:24:26   Start training epoch: 03
+2024-05-01 03:52:48   Finished epoch 03 in 0:28:22, average epoch loss = 0.7002
+2024-05-01 03:54:13   Ranking results: msls_val R@1: 0.7284, R@5: 0.8351, R@10: 0.8676, R@15: 0.8851, R@20: 0.8905, R@50: 0.9122, R@100: 0.9378
+2024-05-01 03:54:21   Improved: previous msls-val best R@1 = 0.7176, current R@1 = 0.7284
+2024-05-01 03:54:21   Start training epoch: 04
+2024-05-01 04:22:47   Finished epoch 04 in 0:28:26, average epoch loss = 0.6670
+2024-05-01 04:24:12   Ranking results: msls_val R@1: 0.7351, R@5: 0.8446, R@10: 0.8689, R@15: 0.8824, R@20: 0.8959, R@50: 0.9189, R@100: 0.9365
+2024-05-01 04:24:20   Improved: previous msls-val best R@1 = 0.7284, current R@1 = 0.7351
+2024-05-01 04:24:20   Start training epoch: 05
+2024-05-01 04:52:45   Finished epoch 05 in 0:28:24, average epoch loss = 0.6459
+2024-05-01 04:54:10   Ranking results: msls_val R@1: 0.7486, R@5: 0.8432, R@10: 0.8703, R@15: 0.8865, R@20: 0.8932, R@50: 0.9203, R@100: 0.9351
+2024-05-01 04:54:18   Improved: previous msls-val best R@1 = 0.7351, current R@1 = 0.7486
+2024-05-01 04:54:18   Start training epoch: 06
+2024-05-01 05:22:46   Finished epoch 06 in 0:28:28, average epoch loss = 0.6199
+2024-05-01 05:24:12   Ranking results: msls_val R@1: 0.7432, R@5: 0.8419, R@10: 0.8743, R@15: 0.8878, R@20: 0.8959, R@50: 0.9216, R@100: 0.9324
+2024-05-01 05:24:16   Not improved: 1 / 3: msls-val best R@1 = 0.7486, current R@1 = 0.7432
+2024-05-01 05:24:16   Start training epoch: 07
+2024-05-01 05:52:46   Finished epoch 07 in 0:28:29, average epoch loss = 0.6062
+2024-05-01 05:54:11   Ranking results: msls_val R@1: 0.7405, R@5: 0.8541, R@10: 0.8757, R@15: 0.8878, R@20: 0.8932, R@50: 0.9243, R@100: 0.9378
+2024-05-01 05:54:14   Not improved: 2 / 3: msls-val best R@1 = 0.7486, current R@1 = 0.7405
+2024-05-01 05:54:14   Start training epoch: 08
+2024-05-01 06:22:11   Finished epoch 08 in 0:27:57, average epoch loss = 0.5931
+2024-05-01 06:23:36   Ranking results: msls_val R@1: 0.7446, R@5: 0.8459, R@10: 0.8757, R@15: 0.8851, R@20: 0.8919, R@50: 0.9243, R@100: 0.9365
+2024-05-01 06:23:40   Not improved: 3 / 3: msls-val best R@1 = 0.7486, current R@1 = 0.7446
+2024-05-01 06:23:40   Performance did not improve for 3 epochs. Stop training.
+2024-05-01 06:23:40   Best  msls-val best R@1 = 0.7486
+2024-05-01 06:23:40   Trained for 09 epochs, in total in 4:29:17
+2024-05-01 06:23:40   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-01 06:23:40   Val set: < Tokyo247Dataset, Tokyo - #database: 75984; #queries: 423 >
+2024-05-01 06:23:40   Val set: < SPEDDataset, SPED - #database: 607; #queries: 607 >
+2024-05-01 06:23:40   Val set: < NordlandDataset, nordland - #database: 27592; #queries: 2760 >
+2024-05-01 06:23:40   Val set: < WholeDatasetFromStruct, pitts30k_val - #database: 10000; #queries: 7608 >
+2024-05-01 06:23:40   Val set: < WholeDatasetFromStruct, pitts30k_test - #database: 10000; #queries: 6816 >
+2024-05-01 06:23:41   Val set: < WholeDatasetFromStruct, pitts250k_test - #database: 83952; #queries: 8280 >
+2024-05-01 06:23:41   Val set: < WholeDatasetFromStruct, pitts250k_val - #database: 78648; #queries: 7608 >
+2024-05-01 06:23:41   Test *best* model on test set
+2024-05-01 06:25:07   Ranking results: msls_val R@1: 0.7486, R@5: 0.8432, R@10: 0.8703, R@15: 0.8865, R@20: 0.8932, R@50: 0.9203, R@100: 0.9351
+2024-05-01 06:31:24   Ranking results: tokyo247 R@1: 0.5177, R@5: 0.7210, R@10: 0.7730, R@15: 0.7967, R@20: 0.8109, R@50: 0.8723, R@100: 0.9078
+2024-05-01 06:31:31   Ranking results: SPED R@1: 0.6969, R@5: 0.8633, R@10: 0.8979, R@15: 0.9127, R@20: 0.9209, R@50: 0.9522, R@100: 0.9802
+2024-05-01 06:33:49   Ranking results: nordland R@1: 0.1127, R@5: 0.1920, R@10: 0.2322, R@15: 0.2656, R@20: 0.2870, R@50: 0.3659, R@100: 0.4348
+2024-05-01 06:35:15   Ranking results: pitts30k_val R@1: 0.8699, R@5: 0.9699, R@10: 0.9844, R@15: 0.9882, R@20: 0.9905, R@50: 0.9959, R@100: 0.9982
+2024-05-01 06:36:36   Ranking results: pitts30k_test R@1: 0.8555, R@5: 0.9354, R@10: 0.9532, R@15: 0.9613, R@20: 0.9664, R@50: 0.9803, R@100: 0.9850
+2024-05-01 06:44:32   Ranking results: pitts250k_test R@1: 0.8761, R@5: 0.9612, R@10: 0.9749, R@15: 0.9804, R@20: 0.9841, R@50: 0.9917, R@100: 0.9944
+2024-05-01 06:51:33   Ranking results: pitts250k_val R@1: 0.8632, R@5: 0.9623, R@10: 0.9771, R@15: 0.9819, R@20: 0.9854, R@50: 0.9925, R@100: 0.9971
+2024-05-01 06:51:33   Test *last* model on test set
+2024-05-01 06:52:59   Ranking results: msls_val R@1: 0.7446, R@5: 0.8459, R@10: 0.8757, R@15: 0.8851, R@20: 0.8919, R@50: 0.9243, R@100: 0.9365
+2024-05-01 06:59:15   Ranking results: tokyo247 R@1: 0.5366, R@5: 0.7234, R@10: 0.7943, R@15: 0.8156, R@20: 0.8392, R@50: 0.8723, R@100: 0.9102
+2024-05-01 06:59:22   Ranking results: SPED R@1: 0.7100, R@5: 0.8649, R@10: 0.8929, R@15: 0.9094, R@20: 0.9193, R@50: 0.9539, R@100: 0.9835
+2024-05-01 07:01:41   Ranking results: nordland R@1: 0.1130, R@5: 0.1917, R@10: 0.2337, R@15: 0.2605, R@20: 0.2859, R@50: 0.3670, R@100: 0.4446
+2024-05-01 07:03:06   Ranking results: pitts30k_val R@1: 0.8751, R@5: 0.9696, R@10: 0.9844, R@15: 0.9890, R@20: 0.9924, R@50: 0.9965, R@100: 0.9982
+2024-05-01 07:04:28   Ranking results: pitts30k_test R@1: 0.8584, R@5: 0.9391, R@10: 0.9563, R@15: 0.9651, R@20: 0.9696, R@50: 0.9808, R@100: 0.9853
+2024-05-01 07:12:21   Ranking results: pitts250k_test R@1: 0.8787, R@5: 0.9634, R@10: 0.9775, R@15: 0.9838, R@20: 0.9866, R@50: 0.9930, R@100: 0.9954
+2024-05-01 07:19:38   Ranking results: pitts250k_val R@1: 0.8707, R@5: 0.9627, R@10: 0.9773, R@15: 0.9824, R@20: 0.9861, R@50: 0.9932, R@100: 0.9968

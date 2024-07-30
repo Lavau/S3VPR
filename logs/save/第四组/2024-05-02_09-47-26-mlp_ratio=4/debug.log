@@ -1,0 +1,336 @@
+2024-05-02 09:47:26   Arguments: Namespace(aggregator_name='token_module', backbone_name='dinov2', device='cuda', dim=768, epochs_num=80, foundation_model_path='pth/dinov2_vitb14_pretrain.pth', infer_batch_size=300, kernel_size=3, lr=0.0001, mlp_ratio=4.0, nc=4096, num_trainable_blocks=4, num_workers=4, optim='adam', patience=3, recall_values=[1, 5, 10, 100], resize=[224, 224], save_dir='logs/2024-05-02_09-47-26', seed=0, train_batch_size=160, val_set_names=['msls_val'])
+2024-05-02 09:47:26   The outputs are being saved in logs/2024-05-02_09-47-26
+2024-05-02 09:47:26   validation dataset names:['msls_val']
+2024-05-02 09:47:26   Using 2 GPUs and 64 CPUs
+2024-05-02 09:47:26   using MLP layer as FFN
+2024-05-02 09:47:29   GeoLocalizationNet(
+  (backbone): Dinov2(
+    (model): DinoVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 768, kernel_size=(14, 14), stride=(14, 14))
+        (norm): Identity()
+      )
+      (blocks): ModuleList(
+        (0): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (1): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (2): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (3): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (4): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (5): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (6): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (7): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (8): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (9): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (10): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+        (11): NestedTensorBlock(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): MemEffAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): LayerScale()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): LayerScale()
+          (drop_path2): Identity()
+        )
+      )
+      (norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (head): Identity()
+    )
+  )
+  (aggregator): TokenMudule(
+    (token_block): TokenBlock(
+      (space_self_aware): SpaceSelfAware(
+        (pad): ZeroPad2d((1, 1, 2, 0))
+        (unfold): Unfold(kernel_size=(3, 3), dilation=1, padding=0, stride=1)
+      )
+      (space_fusion): Sequential(
+        (0): L2Norm()
+        (1): GeneralizedMeanPooling(3.0, output_size=1)
+      )
+      (channel): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (head): GeMHead(
+      (pool): GeneralizedMeanPooling(3.0, output_size=1)
+      (fc): Linear(in_features=768, out_features=4096, bias=True)
+    )
+  )
+)
+2024-05-02 09:47:30   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-02 09:47:30   Start training epoch: 00
+2024-05-02 10:08:32   Finished epoch 00 in 0:21:01, average epoch loss = 0.7835
+2024-05-02 10:09:34   Ranking results: msls_val R@1: 0.8473, R@5: 0.9284, R@10: 0.9419, R@15: 0.9527, R@20: 0.9554, R@50: 0.9649, R@100: 0.9703
+2024-05-02 10:09:37   Improved: previous msls-val best R@1 = 0.0000, current R@1 = 0.8473
+2024-05-02 10:09:37   Start training epoch: 01
+2024-05-02 10:30:36   Finished epoch 01 in 0:20:58, average epoch loss = 0.4492
+2024-05-02 10:31:38   Ranking results: msls_val R@1: 0.8689, R@5: 0.9351, R@10: 0.9459, R@15: 0.9541, R@20: 0.9595, R@50: 0.9662, R@100: 0.9757
+2024-05-02 10:31:45   Improved: previous msls-val best R@1 = 0.8473, current R@1 = 0.8689
+2024-05-02 10:31:45   Start training epoch: 02
+2024-05-02 10:52:44   Finished epoch 02 in 0:20:58, average epoch loss = 0.3880
+2024-05-02 10:53:46   Ranking results: msls_val R@1: 0.8932, R@5: 0.9419, R@10: 0.9554, R@15: 0.9622, R@20: 0.9635, R@50: 0.9703, R@100: 0.9757
+2024-05-02 10:53:54   Improved: previous msls-val best R@1 = 0.8689, current R@1 = 0.8932
+2024-05-02 10:53:54   Start training epoch: 03
+2024-05-02 11:14:53   Finished epoch 03 in 0:20:58, average epoch loss = 0.3373
+2024-05-02 11:15:55   Ranking results: msls_val R@1: 0.8892, R@5: 0.9405, R@10: 0.9527, R@15: 0.9608, R@20: 0.9622, R@50: 0.9703, R@100: 0.9730
+2024-05-02 11:15:59   Not improved: 1 / 3: msls-val best R@1 = 0.8932, current R@1 = 0.8892
+2024-05-02 11:15:59   Start training epoch: 04
+2024-05-02 11:36:57   Finished epoch 04 in 0:20:58, average epoch loss = 0.3119
+2024-05-02 11:37:59   Ranking results: msls_val R@1: 0.8838, R@5: 0.9338, R@10: 0.9486, R@15: 0.9568, R@20: 0.9608, R@50: 0.9703, R@100: 0.9743
+2024-05-02 11:38:03   Not improved: 2 / 3: msls-val best R@1 = 0.8932, current R@1 = 0.8838
+2024-05-02 11:38:03   Start training epoch: 05
+2024-05-02 11:59:02   Finished epoch 05 in 0:20:58, average epoch loss = 0.2987
+2024-05-02 12:00:03   Ranking results: msls_val R@1: 0.8865, R@5: 0.9432, R@10: 0.9541, R@15: 0.9581, R@20: 0.9595, R@50: 0.9703, R@100: 0.9757
+2024-05-02 12:00:07   Not improved: 3 / 3: msls-val best R@1 = 0.8932, current R@1 = 0.8865
+2024-05-02 12:00:07   Performance did not improve for 3 epochs. Stop training.
+2024-05-02 12:00:07   Best  msls-val best R@1 = 0.8932
+2024-05-02 12:00:07   Trained for 06 epochs, in total in 2:12:41
+2024-05-02 12:00:07   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-02 12:00:07   Val set: < Tokyo247Dataset, Tokyo - #database: 75984; #queries: 423 >
+2024-05-02 12:00:07   Val set: < SPEDDataset, SPED - #database: 607; #queries: 607 >
+2024-05-02 12:00:07   Val set: < NordlandDataset, nordland - #database: 27592; #queries: 2760 >
+2024-05-02 12:00:07   Val set: < WholeDatasetFromStruct, pitts30k_val - #database: 10000; #queries: 7608 >
+2024-05-02 12:00:07   Val set: < WholeDatasetFromStruct, pitts30k_test - #database: 10000; #queries: 6816 >
+2024-05-02 12:00:08   Val set: < WholeDatasetFromStruct, pitts250k_test - #database: 83952; #queries: 8280 >
+2024-05-02 12:00:08   Val set: < WholeDatasetFromStruct, pitts250k_val - #database: 78648; #queries: 7608 >
+2024-05-02 12:00:08   Test *best* model on test set
+2024-05-02 12:01:11   Ranking results: msls_val R@1: 0.8932, R@5: 0.9419, R@10: 0.9554, R@15: 0.9622, R@20: 0.9635, R@50: 0.9703, R@100: 0.9757
+2024-05-02 12:07:26   Ranking results: tokyo247 R@1: 0.8085, R@5: 0.8794, R@10: 0.8913, R@15: 0.9031, R@20: 0.9125, R@50: 0.9385, R@100: 0.9574
+2024-05-02 12:07:31   Ranking results: SPED R@1: 0.8797, R@5: 0.9456, R@10: 0.9572, R@15: 0.9621, R@20: 0.9687, R@50: 0.9786, R@100: 0.9835
+2024-05-02 12:09:12   Ranking results: nordland R@1: 0.5438, R@5: 0.7130, R@10: 0.7659, R@15: 0.7960, R@20: 0.8167, R@50: 0.8714, R@100: 0.9076
+2024-05-02 12:10:17   Ranking results: pitts30k_val R@1: 0.9317, R@5: 0.9833, R@10: 0.9911, R@15: 0.9943, R@20: 0.9966, R@50: 0.9984, R@100: 0.9997
+2024-05-02 12:11:18   Ranking results: pitts30k_test R@1: 0.9005, R@5: 0.9478, R@10: 0.9633, R@15: 0.9708, R@20: 0.9762, R@50: 0.9852, R@100: 0.9897
+2024-05-02 12:17:27   Ranking results: pitts250k_test R@1: 0.9324, R@5: 0.9754, R@10: 0.9849, R@15: 0.9893, R@20: 0.9917, R@50: 0.9952, R@100: 0.9973
+2024-05-02 12:23:03   Ranking results: pitts250k_val R@1: 0.9267, R@5: 0.9795, R@10: 0.9874, R@15: 0.9901, R@20: 0.9926, R@50: 0.9963, R@100: 0.9976
+2024-05-02 12:23:03   Test *last* model on test set
+2024-05-02 12:24:05   Ranking results: msls_val R@1: 0.8865, R@5: 0.9432, R@10: 0.9541, R@15: 0.9581, R@20: 0.9595, R@50: 0.9703, R@100: 0.9757
+2024-05-02 12:30:16   Ranking results: tokyo247 R@1: 0.8274, R@5: 0.8818, R@10: 0.9054, R@15: 0.9078, R@20: 0.9149, R@50: 0.9338, R@100: 0.9527
+2024-05-02 12:30:22   Ranking results: SPED R@1: 0.8748, R@5: 0.9390, R@10: 0.9605, R@15: 0.9671, R@20: 0.9703, R@50: 0.9769, R@100: 0.9852
+2024-05-02 12:32:03   Ranking results: nordland R@1: 0.5783, R@5: 0.7438, R@10: 0.7996, R@15: 0.8275, R@20: 0.8475, R@50: 0.9076, R@100: 0.9420
+2024-05-02 12:33:08   Ranking results: pitts30k_val R@1: 0.9349, R@5: 0.9858, R@10: 0.9921, R@15: 0.9953, R@20: 0.9963, R@50: 0.9992, R@100: 1.0000
+2024-05-02 12:34:09   Ranking results: pitts30k_test R@1: 0.9045, R@5: 0.9489, R@10: 0.9635, R@15: 0.9702, R@20: 0.9734, R@50: 0.9847, R@100: 0.9888
+2024-05-02 12:40:19   Ranking results: pitts250k_test R@1: 0.9377, R@5: 0.9755, R@10: 0.9857, R@15: 0.9899, R@20: 0.9923, R@50: 0.9971, R@100: 0.9981
+2024-05-02 12:45:56   Ranking results: pitts250k_val R@1: 0.9305, R@5: 0.9816, R@10: 0.9892, R@15: 0.9922, R@20: 0.9937, R@50: 0.9966, R@100: 0.9978

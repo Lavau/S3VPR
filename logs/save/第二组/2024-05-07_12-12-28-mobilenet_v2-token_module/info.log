@@ -1,0 +1,215 @@
+2024-05-07 12:12:28   Arguments: Namespace(aggregator_name='token_module', backbone_name='mobilenet_v2', device='cuda', dim=1280, epochs_num=80, foundation_model_path='pth/dinov2_vitb14_pretrain.pth', infer_batch_size=300, kernel_size=3, lr=0.0001, mlp_ratio=0.75, nc=4096, num_trainable_blocks=4, num_workers=4, optim='adam', patience=3, recall_values=[1, 5, 10, 100], resize=[224, 224], save_dir='logs/2024-05-07_12-12-28-mobilenet_v2-token_module', seed=0, train_batch_size=160, val_set_names=['msls_val'])
+2024-05-07 12:12:28   The outputs are being saved in logs/2024-05-07_12-12-28-mobilenet_v2-token_module
+2024-05-07 12:12:28   validation dataset names:['msls_val']
+2024-05-07 12:12:29   Using 2 GPUs and 64 CPUs
+2024-05-07 12:12:33   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-07 12:12:33   Start training epoch: 00
+2024-05-07 12:22:13   Finished epoch 00 in 0:09:40, average epoch loss = 1.3678
+2024-05-07 12:22:41   on msls_val, extraction total time=28.055497884750366, the single image extraction time=0.0014300896057065128 
+2024-05-07 12:22:44   on msls_val, retrieval total time=2.265109062194824, the single image retrieval time=0.00011546075350162219 
+2024-05-07 12:22:44   on msls_val, total time=30.44076681137085, the single image time=0.0015516753395540244 
+2024-05-07 12:22:44   Ranking results: msls_val R@1: 0.4892, R@5: 0.6419, R@10: 0.6865, R@15: 0.7230, R@20: 0.7392, R@50: 0.7919, R@100: 0.8230
+2024-05-07 12:22:44   Improved: previous msls-val best R@1 = 0.0000, current R@1 = 0.4892
+2024-05-07 12:22:44   Start training epoch: 01
+2024-05-07 12:32:03   Finished epoch 01 in 0:09:19, average epoch loss = 1.1582
+2024-05-07 12:32:31   on msls_val, extraction total time=27.509331703186035, the single image extraction time=0.0014022495515947618 
+2024-05-07 12:32:33   on msls_val, retrieval total time=2.3774895668029785, the single image retrieval time=0.00012118919190554484 
+2024-05-07 12:32:33   on msls_val, total time=29.95779800415039, the single image time=0.0015270566828499536 
+2024-05-07 12:32:33   Ranking results: msls_val R@1: 0.5541, R@5: 0.6973, R@10: 0.7365, R@15: 0.7635, R@20: 0.7757, R@50: 0.8216, R@100: 0.8432
+2024-05-07 12:32:34   Improved: previous msls-val best R@1 = 0.4892, current R@1 = 0.5541
+2024-05-07 12:32:34   Start training epoch: 02
+2024-05-07 12:41:57   Finished epoch 02 in 0:09:23, average epoch loss = 1.0850
+2024-05-07 12:42:26   on msls_val, extraction total time=28.746870279312134, the single image extraction time=0.0014653313426094472 
+2024-05-07 12:42:29   on msls_val, retrieval total time=2.2864034175872803, the single image retrieval time=0.00011654620336360894 
+2024-05-07 12:42:29   on msls_val, total time=31.09288501739502, the single image time=0.0015849161493217973 
+2024-05-07 12:42:29   Ranking results: msls_val R@1: 0.5554, R@5: 0.6865, R@10: 0.7257, R@15: 0.7568, R@20: 0.7730, R@50: 0.8270, R@100: 0.8500
+2024-05-07 12:42:29   Improved: previous msls-val best R@1 = 0.5541, current R@1 = 0.5554
+2024-05-07 12:42:29   Start training epoch: 03
+2024-05-07 12:52:11   Finished epoch 03 in 0:09:41, average epoch loss = 1.0343
+2024-05-07 12:52:39   on msls_val, extraction total time=28.168243408203125, the single image extraction time=0.0014358366504334348 
+2024-05-07 12:52:42   on msls_val, retrieval total time=2.338766098022461, the single image retrieval time=0.00011921531746469879 
+2024-05-07 12:52:42   on msls_val, total time=30.645361185073853, the single image time=0.0015621042504370402 
+2024-05-07 12:52:42   Ranking results: msls_val R@1: 0.5932, R@5: 0.7243, R@10: 0.7595, R@15: 0.7824, R@20: 0.8000, R@50: 0.8324, R@100: 0.8581
+2024-05-07 12:52:42   Improved: previous msls-val best R@1 = 0.5554, current R@1 = 0.5932
+2024-05-07 12:52:42   Start training epoch: 04
+2024-05-07 13:02:07   Finished epoch 04 in 0:09:24, average epoch loss = 0.9894
+2024-05-07 13:02:36   on msls_val, extraction total time=28.85250949859619, the single image extraction time=0.001470716153460913 
+2024-05-07 13:02:39   on msls_val, retrieval total time=2.444542646408081, the single image retrieval time=0.00012460712847426247 
+2024-05-07 13:02:39   on msls_val, total time=31.370957612991333, the single image time=0.0015990905093786999 
+2024-05-07 13:02:39   Ranking results: msls_val R@1: 0.6162, R@5: 0.7270, R@10: 0.7662, R@15: 0.7905, R@20: 0.8081, R@50: 0.8514, R@100: 0.8730
+2024-05-07 13:02:39   Improved: previous msls-val best R@1 = 0.5932, current R@1 = 0.6162
+2024-05-07 13:02:39   Start training epoch: 05
+2024-05-07 13:12:20   Finished epoch 05 in 0:09:41, average epoch loss = 0.9613
+2024-05-07 13:12:48   on msls_val, extraction total time=27.544134855270386, the single image extraction time=0.0014040235933974099 
+2024-05-07 13:12:50   on msls_val, retrieval total time=2.3323540687561035, the single image retrieval time=0.00011888847327740359 
+2024-05-07 13:12:50   on msls_val, total time=29.956854820251465, the single image time=0.0015270086053752402 
+2024-05-07 13:12:50   Ranking results: msls_val R@1: 0.6189, R@5: 0.7432, R@10: 0.7811, R@15: 0.8054, R@20: 0.8243, R@50: 0.8527, R@100: 0.8730
+2024-05-07 13:12:51   Improved: previous msls-val best R@1 = 0.6162, current R@1 = 0.6189
+2024-05-07 13:12:51   Start training epoch: 06
+2024-05-07 13:22:20   Finished epoch 06 in 0:09:28, average epoch loss = 0.9390
+2024-05-07 13:22:47   on msls_val, extraction total time=27.647191286087036, the single image extraction time=0.0014092767502338177 
+2024-05-07 13:22:50   on msls_val, retrieval total time=2.3184025287628174, the single image retrieval time=0.0001181773131187082 
+2024-05-07 13:22:50   on msls_val, total time=30.060616970062256, the single image time=0.0015322977352463176 
+2024-05-07 13:22:50   Ranking results: msls_val R@1: 0.6230, R@5: 0.7486, R@10: 0.7770, R@15: 0.8027, R@20: 0.8068, R@50: 0.8486, R@100: 0.8770
+2024-05-07 13:22:51   Improved: previous msls-val best R@1 = 0.6189, current R@1 = 0.6230
+2024-05-07 13:22:51   Start training epoch: 07
+2024-05-07 13:32:35   Finished epoch 07 in 0:09:44, average epoch loss = 0.9239
+2024-05-07 13:33:03   on msls_val, extraction total time=27.781683206558228, the single image extraction time=0.0014161322870097986 
+2024-05-07 13:33:05   on msls_val, retrieval total time=2.3353116512298584, the single image retrieval time=0.00011903923189060345 
+2024-05-07 13:33:05   on msls_val, total time=30.203646659851074, the single image time=0.0015395884728234821 
+2024-05-07 13:33:05   Ranking results: msls_val R@1: 0.6338, R@5: 0.7446, R@10: 0.7797, R@15: 0.8068, R@20: 0.8230, R@50: 0.8649, R@100: 0.8770
+2024-05-07 13:33:06   Improved: previous msls-val best R@1 = 0.6230, current R@1 = 0.6338
+2024-05-07 13:33:06   Start training epoch: 08
+2024-05-07 13:43:01   Finished epoch 08 in 0:09:54, average epoch loss = 0.9112
+2024-05-07 13:43:29   on msls_val, extraction total time=28.326473474502563, the single image extraction time=0.0014439022058569968 
+2024-05-07 13:43:32   on msls_val, retrieval total time=2.478616952896118, the single image retrieval time=0.00012634401839617282 
+2024-05-07 13:43:32   on msls_val, total time=30.899102210998535, the single image time=0.0015750383428993035 
+2024-05-07 13:43:32   Ranking results: msls_val R@1: 0.6378, R@5: 0.7514, R@10: 0.7892, R@15: 0.8135, R@20: 0.8270, R@50: 0.8622, R@100: 0.8811
+2024-05-07 13:43:32   Improved: previous msls-val best R@1 = 0.6338, current R@1 = 0.6378
+2024-05-07 13:43:32   Start training epoch: 09
+2024-05-07 13:53:13   Finished epoch 09 in 0:09:40, average epoch loss = 0.8973
+2024-05-07 13:53:41   on msls_val, extraction total time=28.555072784423828, the single image extraction time=0.001455554734653065 
+2024-05-07 13:53:44   on msls_val, retrieval total time=2.376272201538086, the single image retrieval time=0.00012112713842074044 
+2024-05-07 13:53:44   on msls_val, total time=31.017297744750977, the single image time=0.0015810631942476795 
+2024-05-07 13:53:44   Ranking results: msls_val R@1: 0.6392, R@5: 0.7500, R@10: 0.7824, R@15: 0.8081, R@20: 0.8216, R@50: 0.8554, R@100: 0.8770
+2024-05-07 13:53:45   Improved: previous msls-val best R@1 = 0.6378, current R@1 = 0.6392
+2024-05-07 13:53:45   Start training epoch: 10
+2024-05-07 14:03:25   Finished epoch 10 in 0:09:40, average epoch loss = 0.8888
+2024-05-07 14:03:53   on msls_val, extraction total time=27.646915912628174, the single image extraction time=0.0014092627134584654 
+2024-05-07 14:03:55   on msls_val, retrieval total time=2.3250885009765625, the single image retrieval time=0.00011851812116304224 
+2024-05-07 14:03:55   on msls_val, total time=30.22553777694702, the single image time=0.0015407043417752584 
+2024-05-07 14:03:55   Ranking results: msls_val R@1: 0.6405, R@5: 0.7459, R@10: 0.7784, R@15: 0.8054, R@20: 0.8216, R@50: 0.8595, R@100: 0.8838
+2024-05-07 14:03:56   Improved: previous msls-val best R@1 = 0.6392, current R@1 = 0.6405
+2024-05-07 14:03:56   Start training epoch: 11
+2024-05-07 14:13:25   Finished epoch 11 in 0:09:28, average epoch loss = 0.8843
+2024-05-07 14:13:52   on msls_val, extraction total time=27.126851558685303, the single image extraction time=0.001382753163354333 
+2024-05-07 14:13:54   on msls_val, retrieval total time=2.2809832096099854, the single image retrieval time=0.00011626991587368669 
+2024-05-07 14:13:54   on msls_val, total time=29.527180671691895, the single image time=0.001505106569053517 
+2024-05-07 14:13:54   Ranking results: msls_val R@1: 0.6473, R@5: 0.7500, R@10: 0.7851, R@15: 0.8108, R@20: 0.8243, R@50: 0.8554, R@100: 0.8784
+2024-05-07 14:13:55   Improved: previous msls-val best R@1 = 0.6405, current R@1 = 0.6473
+2024-05-07 14:13:55   Start training epoch: 12
+2024-05-07 14:23:13   Finished epoch 12 in 0:09:18, average epoch loss = 0.8768
+2024-05-07 14:23:40   on msls_val, extraction total time=26.57176923751831, the single image extraction time=0.0013544586215474724 
+2024-05-07 14:23:42   on msls_val, retrieval total time=2.2772445678710938, the single image retrieval time=0.00011607934386130562 
+2024-05-07 14:23:42   on msls_val, total time=28.944106578826904, the single image time=0.0014753851859938274 
+2024-05-07 14:23:42   Ranking results: msls_val R@1: 0.6514, R@5: 0.7500, R@10: 0.7838, R@15: 0.8041, R@20: 0.8216, R@50: 0.8581, R@100: 0.8797
+2024-05-07 14:23:43   Improved: previous msls-val best R@1 = 0.6473, current R@1 = 0.6514
+2024-05-07 14:23:43   Start training epoch: 13
+2024-05-07 14:33:19   Finished epoch 13 in 0:09:35, average epoch loss = 0.8713
+2024-05-07 14:33:46   on msls_val, extraction total time=27.01971197128296, the single image extraction time=0.001377291873345038 
+2024-05-07 14:33:48   on msls_val, retrieval total time=2.6202430725097656, the single image retrieval time=0.0001335632109547235 
+2024-05-07 14:33:48   on msls_val, total time=29.688266277313232, the single image time=0.0015133176815839144 
+2024-05-07 14:33:48   Ranking results: msls_val R@1: 0.6486, R@5: 0.7500, R@10: 0.7838, R@15: 0.8149, R@20: 0.8216, R@50: 0.8514, R@100: 0.8811
+2024-05-07 14:33:49   Not improved: 1 / 3: msls-val best R@1 = 0.6514, current R@1 = 0.6486
+2024-05-07 14:33:49   Start training epoch: 14
+2024-05-07 14:43:32   Finished epoch 14 in 0:09:43, average epoch loss = 0.8675
+2024-05-07 14:44:00   on msls_val, extraction total time=27.76785922050476, the single image extraction time=0.0014154276287340587 
+2024-05-07 14:44:02   on msls_val, retrieval total time=2.2816433906555176, the single image retrieval time=0.00011630356767537555 
+2024-05-07 14:44:02   on msls_val, total time=30.141499519348145, the single image time=0.0015364206096109769 
+2024-05-07 14:44:02   Ranking results: msls_val R@1: 0.6514, R@5: 0.7514, R@10: 0.7878, R@15: 0.8135, R@20: 0.8257, R@50: 0.8554, R@100: 0.8811
+2024-05-07 14:44:03   Not improved: 2 / 3: msls-val best R@1 = 0.6514, current R@1 = 0.6514
+2024-05-07 14:44:03   Start training epoch: 15
+2024-05-07 14:53:49   Finished epoch 15 in 0:09:46, average epoch loss = 0.8654
+2024-05-07 14:54:17   on msls_val, extraction total time=27.9658682346344, the single image extraction time=0.0014255208601607911 
+2024-05-07 14:54:19   on msls_val, retrieval total time=2.3611388206481934, the single image retrieval time=0.00012035573558202637 
+2024-05-07 14:54:19   on msls_val, total time=30.429783821105957, the single image time=0.0015511154970489324 
+2024-05-07 14:54:19   Ranking results: msls_val R@1: 0.6527, R@5: 0.7514, R@10: 0.7865, R@15: 0.8135, R@20: 0.8230, R@50: 0.8541, R@100: 0.8797
+2024-05-07 14:54:20   Improved: previous msls-val best R@1 = 0.6514, current R@1 = 0.6527
+2024-05-07 14:54:20   Start training epoch: 16
+2024-05-07 15:03:37   Finished epoch 16 in 0:09:17, average epoch loss = 0.8630
+2024-05-07 15:04:06   on msls_val, extraction total time=28.41327929496765, the single image extraction time=0.0014483270106518326 
+2024-05-07 15:04:08   on msls_val, retrieval total time=2.2634053230285645, the single image retrieval time=0.00011537390779022145 
+2024-05-07 15:04:08   on msls_val, total time=30.76527214050293, the single image time=0.0015682165429963773 
+2024-05-07 15:04:08   Ranking results: msls_val R@1: 0.6486, R@5: 0.7541, R@10: 0.7892, R@15: 0.8122, R@20: 0.8270, R@50: 0.8541, R@100: 0.8811
+2024-05-07 15:04:09   Not improved: 1 / 3: msls-val best R@1 = 0.6527, current R@1 = 0.6486
+2024-05-07 15:04:09   Start training epoch: 17
+2024-05-07 15:13:25   Finished epoch 17 in 0:09:16, average epoch loss = 0.8603
+2024-05-07 15:13:53   on msls_val, extraction total time=27.768434524536133, the single image extraction time=0.0014154569540491453 
+2024-05-07 15:13:56   on msls_val, retrieval total time=2.3158299922943115, the single image retrieval time=0.00011804618168489711 
+2024-05-07 15:13:56   on msls_val, total time=30.193451642990112, the single image time=0.0015390687961560868 
+2024-05-07 15:13:56   Ranking results: msls_val R@1: 0.6486, R@5: 0.7541, R@10: 0.7892, R@15: 0.8149, R@20: 0.8257, R@50: 0.8554, R@100: 0.8811
+2024-05-07 15:13:56   Not improved: 2 / 3: msls-val best R@1 = 0.6527, current R@1 = 0.6486
+2024-05-07 15:13:56   Start training epoch: 18
+2024-05-07 15:23:06   Finished epoch 18 in 0:09:09, average epoch loss = 0.8611
+2024-05-07 15:23:33   on msls_val, extraction total time=27.15856623649597, the single image extraction time=0.0013843697745180943 
+2024-05-07 15:23:35   on msls_val, retrieval total time=2.32723331451416, the single image retrieval time=0.00011862745002111124 
+2024-05-07 15:23:35   on msls_val, total time=29.59273672103882, the single image time=0.0015084481966071372 
+2024-05-07 15:23:35   Ranking results: msls_val R@1: 0.6459, R@5: 0.7500, R@10: 0.7865, R@15: 0.8135, R@20: 0.8270, R@50: 0.8554, R@100: 0.8797
+2024-05-07 15:23:36   Not improved: 3 / 3: msls-val best R@1 = 0.6527, current R@1 = 0.6459
+2024-05-07 15:23:36   Performance did not improve for 3 epochs. Stop training.
+2024-05-07 15:23:36   Best  msls-val best R@1 = 0.6527
+2024-05-07 15:23:36   Trained for 19 epochs, in total in 3:11:07
+2024-05-07 15:23:36   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-07 15:23:36   Val set: < Tokyo247Dataset, Tokyo - #database: 75984; #queries: 423 >
+2024-05-07 15:23:36   Val set: < SPEDDataset, SPED - #database: 607; #queries: 607 >
+2024-05-07 15:23:36   Val set: < NordlandDataset, nordland - #database: 27592; #queries: 2760 >
+2024-05-07 15:23:36   Val set: < WholeDatasetFromStruct, pitts30k_val - #database: 10000; #queries: 7608 >
+2024-05-07 15:23:36   Val set: < WholeDatasetFromStruct, pitts30k_test - #database: 10000; #queries: 6816 >
+2024-05-07 15:23:37   Val set: < WholeDatasetFromStruct, pitts250k_test - #database: 83952; #queries: 8280 >
+2024-05-07 15:23:37   Val set: < WholeDatasetFromStruct, pitts250k_val - #database: 78648; #queries: 7608 >
+2024-05-07 15:23:37   Test *best* model on test set
+2024-05-07 15:24:05   on msls_val, extraction total time=27.38837480545044, the single image extraction time=0.00139608394359519 
+2024-05-07 15:24:07   on msls_val, retrieval total time=2.1470208168029785, the single image retrieval time=0.00010944137102676004 
+2024-05-07 15:24:07   on msls_val, total time=29.577948808670044, the single image time=0.001507694403541138 
+2024-05-07 15:24:07   Ranking results: msls_val R@1: 0.6527, R@5: 0.7514, R@10: 0.7865, R@15: 0.8135, R@20: 0.8230, R@50: 0.8541, R@100: 0.8797
+2024-05-07 15:30:10   on tokyo247, extraction total time=362.8003544807434, the single image extraction time=0.004748260689213598 
+2024-05-07 15:30:16   on tokyo247, retrieval total time=5.890779733657837, the single image retrieval time=7.709738287928903e-05 
+2024-05-07 15:30:16   on tokyo247, total time=368.9459366798401, the single image time=0.004828692877352076 
+2024-05-07 15:30:16   Ranking results: tokyo247 R@1: 0.1655, R@5: 0.1986, R@10: 0.2080, R@15: 0.2364, R@20: 0.2411, R@50: 0.2671, R@100: 0.2908
+2024-05-07 15:30:19   on SPED, extraction total time=2.580357313156128, the single image extraction time=0.002125500257953977 
+2024-05-07 15:30:19   on SPED, retrieval total time=0.11551785469055176, the single image retrieval time=9.515474027228316e-05 
+2024-05-07 15:30:19   on SPED, total time=2.7847414016723633, the single image time=0.002293856179301782 
+2024-05-07 15:30:19   Ranking results: SPED R@1: 0.5783, R@5: 0.7249, R@10: 0.7694, R@15: 0.7908, R@20: 0.8105, R@50: 0.8649, R@100: 0.9259
+2024-05-07 15:30:56   on nordland, extraction total time=36.87026619911194, the single image extraction time=0.0012147557392959917 
+2024-05-07 15:31:07   on nordland, retrieval total time=11.192427158355713, the single image retrieval time=0.0003687541894555783 
+2024-05-07 15:31:07   on nordland, total time=48.23886680603027, the single image time=0.0015893142727342604 
+2024-05-07 15:31:07   Ranking results: nordland R@1: 0.1011, R@5: 0.1891, R@10: 0.2388, R@15: 0.2746, R@20: 0.3000, R@50: 0.3949, R@100: 0.4757
+2024-05-07 15:31:33   on pitts30k_val, extraction total time=25.47905206680298, the single image extraction time=0.0014470156784872205 
+2024-05-07 15:31:44   on pitts30k_val, retrieval total time=11.61927318572998, the single image retrieval time=0.0006598860282672638 
+2024-05-07 15:31:44   on pitts30k_val, total time=37.328388690948486, the single image time=0.0021199675540066157 
+2024-05-07 15:31:44   Ranking results: pitts30k_val R@1: 0.7428, R@5: 0.8265, R@10: 0.8511, R@15: 0.8678, R@20: 0.8791, R@50: 0.9414, R@100: 0.9807
+2024-05-07 15:32:08   on pitts30k_test, extraction total time=23.655672073364258, the single image extraction time=0.0014067359701096728 
+2024-05-07 15:32:19   on pitts30k_test, retrieval total time=10.243587493896484, the single image retrieval time=0.0006091572011118271 
+2024-05-07 15:32:19   on pitts30k_test, total time=34.08935594558716, the single image time=0.0020271976656509967 
+2024-05-07 15:32:19   Ranking results: pitts30k_test R@1: 0.7534, R@5: 0.8273, R@10: 0.8508, R@15: 0.8652, R@20: 0.8732, R@50: 0.9002, R@100: 0.9233
+2024-05-07 15:34:21   on pitts250k_test, extraction total time=122.17426443099976, the single image extraction time=0.0013246407367399574 
+2024-05-07 15:35:57   on pitts250k_test, retrieval total time=96.03711080551147, the single image retrieval time=0.0010412558635344725 
+2024-05-07 15:35:57   on pitts250k_test, total time=218.57014107704163, the single image time=0.002369786419865574 
+2024-05-07 15:35:57   Ranking results: pitts250k_test R@1: 0.7283, R@5: 0.7957, R@10: 0.8165, R@15: 0.8283, R@20: 0.8361, R@50: 0.8582, R@100: 0.8743
+2024-05-07 15:37:51   on pitts250k_val, extraction total time=113.77039575576782, the single image extraction time=0.0013189852967418825 
+2024-05-07 15:39:12   on pitts250k_val, retrieval total time=80.63458156585693, the single image retrieval time=0.0009348286677547873 
+2024-05-07 15:39:12   on pitts250k_val, total time=194.84238028526306, the single image time=0.00225888495044128 
+2024-05-07 15:39:12   Ranking results: pitts250k_val R@1: 0.6798, R@5: 0.7359, R@10: 0.7530, R@15: 0.7626, R@20: 0.7693, R@50: 0.7939, R@100: 0.8130
+2024-05-07 15:39:12   Test *last* model on test set
+2024-05-07 15:39:40   on msls_val, extraction total time=27.51453423500061, the single image extraction time=0.0014025147433479768 
+2024-05-07 15:39:42   on msls_val, retrieval total time=2.4856107234954834, the single image retrieval time=0.00012670051603096562 
+2024-05-07 15:39:42   on msls_val, total time=30.03954005241394, the single image time=0.0015312233689679855 
+2024-05-07 15:39:42   Ranking results: msls_val R@1: 0.6459, R@5: 0.7500, R@10: 0.7865, R@15: 0.8135, R@20: 0.8270, R@50: 0.8554, R@100: 0.8797
+2024-05-07 15:45:45   on tokyo247, extraction total time=362.193701505661, the single image extraction time=0.004740320932711152 
+2024-05-07 15:45:51   on tokyo247, retrieval total time=6.203728199005127, the single image retrieval time=8.119319171025072e-05 
+2024-05-07 15:45:51   on tokyo247, total time=368.60382437705994, the single image time=0.004824215377871922 
+2024-05-07 15:45:51   Ranking results: tokyo247 R@1: 0.1678, R@5: 0.1986, R@10: 0.2222, R@15: 0.2293, R@20: 0.2411, R@50: 0.2648, R@100: 0.2908
+2024-05-07 15:45:53   on SPED, extraction total time=2.247323513031006, the single image extraction time=0.0018511725807504166 
+2024-05-07 15:45:53   on SPED, retrieval total time=0.12656378746032715, the single image retrieval time=0.00010425353168066486 
+2024-05-07 15:45:53   on SPED, total time=2.3788254261016846, the single image time=0.0019594937612040235 
+2024-05-07 15:45:53   Ranking results: SPED R@1: 0.5733, R@5: 0.7183, R@10: 0.7710, R@15: 0.7924, R@20: 0.8105, R@50: 0.8649, R@100: 0.9259
+2024-05-07 15:46:31   on nordland, extraction total time=38.08484435081482, the single image extraction time=0.001254772151779613 
+2024-05-07 15:46:42   on nordland, retrieval total time=10.582324981689453, the single image retrieval time=0.00034865330066188236 
+2024-05-07 15:46:42   on nordland, total time=48.772727489471436, the single image time=0.0016069032514981364 
+2024-05-07 15:46:42   Ranking results: nordland R@1: 0.1025, R@5: 0.1935, R@10: 0.2453, R@15: 0.2783, R@20: 0.3036, R@50: 0.3982, R@100: 0.4837
+2024-05-07 15:47:07   on pitts30k_val, extraction total time=24.897355556488037, the single image extraction time=0.001413979756729216 
+2024-05-07 15:47:19   on pitts30k_val, retrieval total time=11.563219785690308, the single image retrieval time=0.000656702622994679 
+2024-05-07 15:47:19   on pitts30k_val, total time=36.49587893486023, the single image time=0.0020726873543196406 
+2024-05-07 15:47:19   Ranking results: pitts30k_val R@1: 0.7350, R@5: 0.8210, R@10: 0.8444, R@15: 0.8595, R@20: 0.8715, R@50: 0.9368, R@100: 0.9787
+2024-05-07 15:47:42   on pitts30k_test, extraction total time=23.309470415115356, the single image extraction time=0.0013861483358179921 
+2024-05-07 15:47:52   on pitts30k_test, retrieval total time=10.320505142211914, the single image retrieval time=0.0006137312762970929 
+2024-05-07 15:47:52   on pitts30k_test, total time=33.667075395584106, the single image time=0.002002085834656524 
+2024-05-07 15:47:52   Ranking results: pitts30k_test R@1: 0.7545, R@5: 0.8275, R@10: 0.8517, R@15: 0.8666, R@20: 0.8729, R@50: 0.8995, R@100: 0.9237
+2024-05-07 15:49:52   on pitts250k_test, extraction total time=119.6540138721466, the single image extraction time=0.0012973156157531725 
+2024-05-07 15:51:26   on pitts250k_test, retrieval total time=93.87087535858154, the single image retrieval time=0.0010177690536753137 
+2024-05-07 15:51:26   on pitts250k_test, total time=213.74340343475342, the single image time=0.002317453849366309 
+2024-05-07 15:51:26   Ranking results: pitts250k_test R@1: 0.7301, R@5: 0.7992, R@10: 0.8209, R@15: 0.8316, R@20: 0.8396, R@50: 0.8627, R@100: 0.8781
+2024-05-07 15:53:20   on pitts250k_val, extraction total time=114.41878342628479, the single image extraction time=0.0013265023120279725 
+2024-05-07 15:54:40   on pitts250k_val, retrieval total time=79.79762601852417, the single image retrieval time=0.0009251255103241997 
+2024-05-07 15:54:40   on pitts250k_val, total time=194.38911509513855, the single image time=0.0022536300674172063 
+2024-05-07 15:54:40   Ranking results: pitts250k_val R@1: 0.6798, R@5: 0.7411, R@10: 0.7604, R@15: 0.7714, R@20: 0.7771, R@50: 0.7994, R@100: 0.8187

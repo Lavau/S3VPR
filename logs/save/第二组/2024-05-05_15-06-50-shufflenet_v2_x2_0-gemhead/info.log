@@ -1,0 +1,62 @@
+2024-05-05 15:06:50   Arguments: Namespace(aggregator_name='gemhead', backbone_name='shufflenet_v2_x2_0', device='cuda', dim=2048, epochs_num=80, foundation_model_path='pth/dinov2_vitb14_pretrain.pth', infer_batch_size=300, kernel_size=3, lr=0.0001, mlp_ratio=0.75, nc=4096, num_trainable_blocks=4, num_workers=4, optim='adam', patience=3, recall_values=[1, 5, 10, 100], resize=[224, 224], save_dir='logs/2024-05-05_15-06-50-shufflenet_v2_x2_0-gemhead', seed=0, train_batch_size=160, val_set_names=['msls_val'])
+2024-05-05 15:06:50   The outputs are being saved in logs/2024-05-05_15-06-50-shufflenet_v2_x2_0-gemhead
+2024-05-05 15:06:50   validation dataset names:['msls_val']
+2024-05-05 15:06:54   Using 2 GPUs and 64 CPUs
+2024-05-05 15:06:57   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-05 15:06:57   Start training epoch: 00
+2024-05-05 15:16:57   Finished epoch 00 in 0:09:59, average epoch loss = 1.0403
+2024-05-05 15:17:30   Ranking results: msls_val R@1: 0.4257, R@5: 0.5851, R@10: 0.6473, R@15: 0.6811, R@20: 0.7081, R@50: 0.7608, R@100: 0.8081
+2024-05-05 15:17:30   Improved: previous msls-val best R@1 = 0.0000, current R@1 = 0.4257
+2024-05-05 15:17:30   Start training epoch: 01
+2024-05-05 15:27:19   Finished epoch 01 in 0:09:48, average epoch loss = 0.7987
+2024-05-05 15:27:51   Ranking results: msls_val R@1: 0.5378, R@5: 0.6473, R@10: 0.7095, R@15: 0.7338, R@20: 0.7419, R@50: 0.7905, R@100: 0.8257
+2024-05-05 15:27:51   Improved: previous msls-val best R@1 = 0.4257, current R@1 = 0.5378
+2024-05-05 15:27:51   Start training epoch: 02
+2024-05-05 15:37:45   Finished epoch 02 in 0:09:53, average epoch loss = 0.7097
+2024-05-05 15:38:18   Ranking results: msls_val R@1: 0.5703, R@5: 0.6811, R@10: 0.7311, R@15: 0.7554, R@20: 0.7703, R@50: 0.8135, R@100: 0.8351
+2024-05-05 15:38:18   Improved: previous msls-val best R@1 = 0.5378, current R@1 = 0.5703
+2024-05-05 15:38:18   Start training epoch: 03
+2024-05-05 15:48:34   Finished epoch 03 in 0:10:16, average epoch loss = 0.6519
+2024-05-05 15:49:06   Ranking results: msls_val R@1: 0.5838, R@5: 0.6851, R@10: 0.7311, R@15: 0.7554, R@20: 0.7716, R@50: 0.8203, R@100: 0.8351
+2024-05-05 15:49:07   Improved: previous msls-val best R@1 = 0.5703, current R@1 = 0.5838
+2024-05-05 15:49:07   Start training epoch: 04
+2024-05-05 15:59:27   Finished epoch 04 in 0:10:20, average epoch loss = 0.6224
+2024-05-05 15:59:59   Ranking results: msls_val R@1: 0.5824, R@5: 0.6838, R@10: 0.7284, R@15: 0.7527, R@20: 0.7622, R@50: 0.8149, R@100: 0.8446
+2024-05-05 16:00:00   Not improved: 1 / 3: msls-val best R@1 = 0.5838, current R@1 = 0.5824
+2024-05-05 16:00:00   Start training epoch: 05
+2024-05-05 16:10:16   Finished epoch 05 in 0:10:16, average epoch loss = 0.5963
+2024-05-05 16:10:49   Ranking results: msls_val R@1: 0.5622, R@5: 0.6811, R@10: 0.7297, R@15: 0.7568, R@20: 0.7703, R@50: 0.8216, R@100: 0.8446
+2024-05-05 16:10:49   Not improved: 2 / 3: msls-val best R@1 = 0.5838, current R@1 = 0.5622
+2024-05-05 16:10:49   Start training epoch: 06
+2024-05-05 16:20:56   Finished epoch 06 in 0:10:06, average epoch loss = 0.5725
+2024-05-05 16:21:29   Ranking results: msls_val R@1: 0.5635, R@5: 0.6784, R@10: 0.7311, R@15: 0.7541, R@20: 0.7703, R@50: 0.8243, R@100: 0.8446
+2024-05-05 16:21:29   Not improved: 3 / 3: msls-val best R@1 = 0.5838, current R@1 = 0.5635
+2024-05-05 16:21:29   Performance did not improve for 3 epochs. Stop training.
+2024-05-05 16:21:29   Best  msls-val best R@1 = 0.5838
+2024-05-05 16:21:29   Trained for 07 epochs, in total in 1:14:39
+2024-05-05 16:21:29   Val set: < MSLS, msls-val - #database: 18871; #queries: 747 >
+2024-05-05 16:21:29   Val set: < Tokyo247Dataset, Tokyo - #database: 75984; #queries: 423 >
+2024-05-05 16:21:29   Val set: < SPEDDataset, SPED - #database: 607; #queries: 607 >
+2024-05-05 16:21:29   Val set: < NordlandDataset, nordland - #database: 27592; #queries: 2760 >
+2024-05-05 16:21:29   Val set: < WholeDatasetFromStruct, pitts30k_val - #database: 10000; #queries: 7608 >
+2024-05-05 16:21:30   Val set: < WholeDatasetFromStruct, pitts30k_test - #database: 10000; #queries: 6816 >
+2024-05-05 16:21:30   Val set: < WholeDatasetFromStruct, pitts250k_test - #database: 83952; #queries: 8280 >
+2024-05-05 16:21:31   Val set: < WholeDatasetFromStruct, pitts250k_val - #database: 78648; #queries: 7608 >
+2024-05-05 16:21:31   Test *best* model on test set
+2024-05-05 16:22:03   Ranking results: msls_val R@1: 0.5838, R@5: 0.6851, R@10: 0.7311, R@15: 0.7554, R@20: 0.7716, R@50: 0.8203, R@100: 0.8351
+2024-05-05 16:28:23   Ranking results: tokyo247 R@1: 0.0284, R@5: 0.0331, R@10: 0.0378, R@15: 0.0402, R@20: 0.0496, R@50: 0.0733, R@100: 0.0875
+2024-05-05 16:28:26   Ranking results: SPED R@1: 0.4201, R@5: 0.5980, R@10: 0.6689, R@15: 0.6969, R@20: 0.7265, R@50: 0.8155, R@100: 0.8896
+2024-05-05 16:29:16   Ranking results: nordland R@1: 0.0598, R@5: 0.1054, R@10: 0.1312, R@15: 0.1431, R@20: 0.1536, R@50: 0.1993, R@100: 0.2529
+2024-05-05 16:29:58   Ranking results: pitts30k_val R@1: 0.2793, R@5: 0.3035, R@10: 0.3194, R@15: 0.3385, R@20: 0.3701, R@50: 0.6728, R@100: 0.9064
+2024-05-05 16:30:34   Ranking results: pitts30k_test R@1: 0.5075, R@5: 0.6065, R@10: 0.6472, R@15: 0.6727, R@20: 0.6953, R@50: 0.7722, R@100: 0.8364
+2024-05-05 16:34:30   Ranking results: pitts250k_test R@1: 0.3533, R@5: 0.3781, R@10: 0.3906, R@15: 0.3973, R@20: 0.4019, R@50: 0.4207, R@100: 0.4372
+2024-05-05 16:38:08   Ranking results: pitts250k_val R@1: 0.2691, R@5: 0.2917, R@10: 0.2997, R@15: 0.3064, R@20: 0.3120, R@50: 0.3371, R@100: 0.3682
+2024-05-05 16:38:08   Test *last* model on test set
+2024-05-05 16:38:48   Ranking results: msls_val R@1: 0.5635, R@5: 0.6784, R@10: 0.7311, R@15: 0.7541, R@20: 0.7703, R@50: 0.8243, R@100: 0.8446
+2024-05-05 16:45:08   Ranking results: tokyo247 R@1: 0.0284, R@5: 0.0307, R@10: 0.0331, R@15: 0.0331, R@20: 0.0378, R@50: 0.0615, R@100: 0.0851
+2024-05-05 16:45:11   Ranking results: SPED R@1: 0.4053, R@5: 0.5667, R@10: 0.6442, R@15: 0.6853, R@20: 0.7183, R@50: 0.8105, R@100: 0.8797
+2024-05-05 16:46:03   Ranking results: nordland R@1: 0.0500, R@5: 0.1025, R@10: 0.1196, R@15: 0.1283, R@20: 0.1409, R@50: 0.1779, R@100: 0.2225
+2024-05-05 16:46:44   Ranking results: pitts30k_val R@1: 0.2813, R@5: 0.2900, R@10: 0.3061, R@15: 0.3240, R@20: 0.3403, R@50: 0.5924, R@100: 0.8846
+2024-05-05 16:47:20   Ranking results: pitts30k_test R@1: 0.5279, R@5: 0.6196, R@10: 0.6636, R@15: 0.6922, R@20: 0.7130, R@50: 0.7952, R@100: 0.8545
+2024-05-05 16:51:17   Ranking results: pitts250k_test R@1: 0.3658, R@5: 0.3860, R@10: 0.3920, R@15: 0.3955, R@20: 0.3979, R@50: 0.4060, R@100: 0.4140
+2024-05-05 16:54:46   Ranking results: pitts250k_val R@1: 0.2794, R@5: 0.2897, R@10: 0.3023, R@15: 0.3131, R@20: 0.3206, R@50: 0.3520, R@100: 0.3860
