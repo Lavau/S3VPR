@@ -1,0 +1,12 @@
+dinov2
+log_nohup
+logs
+pth
+__pycache__
+dataloaders/__pycache__
+dataloaders/train/__pycache__
+dataloaders/val/__pycache__
+net/__pycache__
+net/aggregator/__pycache__
+net/backbone/__pycache__
+net/rerank/__pycache__
