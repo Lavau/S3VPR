@@ -1,6 +1,19 @@
+> We express the thanks to these authors: [gsv-cities](https://github.com/amaralibey/gsv-cities), [MixVPR](https://github.com/amaralibey/MixVPR), [SALAD](https://github.com/serizba/salad), [DINOv2](https://github.com/facebookresearch/dinov2), [CricaVPR](https://github.com/Lu-Feng/CricaVPR), [SENet](https://github.com/sungonce/SENet).
+
+## Introduction
+
+<p align="middle">
+    <img src="assets/visualization.png" style="zoom: 40%">
+</p>
+
+<p align="middle">
+    <img src="assets/token module.jpg" style="zoom: 50%">
+</p>
+
 ## Train
+
 1. Install annoconda.
-2. Configure the s3vpr runtime environment: `conda create --name s3vpr python=3.9`. Then, install the python package: `pip install -r requirement.txt`.
+2. Configure the `s3vpr` runtime environment: `conda create --name s3vpr python=3.9`. Then, install the python package: `pip install -r requirement.txt`.
 3. Download the dataset
 * [GSV-Cities](https://github.com/amaralibey/gsv-cities.git)
 * [Mapillary Street-level Sequences Dataset](https://github.com/mapillary/mapillary_sls)
@@ -12,4 +25,10 @@
 7. Train the model using the `train.sh` command.
 
 ## Evaluate
-Download the checkpoint from [Google Drive](https://drive.google.com/file/d/1MQ6QmsVKPivjXuSs9p1afi9peMtgc0is/view?usp=drive_link) to the path `pth`, and run  `python eval.py`.
+1. Download the checkpoint from [Google Drive](https://drive.google.com/file/d/1MQ6QmsVKPivjXuSs9p1afi9peMtgc0is/view?usp=drive_link) to the path `pth`.
+2. Run `python eval.py`.
+
+## Citation
+
+> Our paper, `S3VPR: Space Self-awareness under self-attention for Visual Place Recognition` is under review .....
+
