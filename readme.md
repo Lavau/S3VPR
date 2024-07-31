@@ -4,6 +4,7 @@
 
 <p align="middle">
     <img src="assets/visualization.png" style="zoom: 40%">
+	<p>DINOv2 focuses on discriminative regions, such as trees; Based on the effect of DINOv2, S2VPR expands the range of discriminative regions.</p>
 </p>
 
 <p align="middle">
