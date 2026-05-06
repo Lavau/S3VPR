@@ -33,6 +33,7 @@
 
 ## Citation
 
+```
 @article{:/publisher/Beijing Zhongke Journal Publising Co. Ltd./journal/Data Intelligence///10.3724/2096-7004.di.2026.0081,
   author = "Shaoqi Hou,Chenyu Wu,Zebang Qin,Guangqiang Yin,Zhiguo Wang",
   title = "S3VPR: Space Self-awareness under Self-attention for Visual Place Recognition",
@@ -41,4 +42,4 @@
   url = "http://www.sciengine.com/publisher/Beijing Zhongke Journal Publising Co. Ltd./journal/Data Intelligence///10.3724/2096-7004.di.2026.0081,
   doi = "https://doi.org/10.3724/2096-7004.di.2026.0081"
 }
-
+```
